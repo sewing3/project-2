@@ -14,3 +14,34 @@ let containsDuplicates = s => {
   }
   return false;
 };
+
+let revWords1 = sentence => {
+  var result = sentence.split(" ");
+  var temp;
+  for (var i = 0; i < result.length; i++) {
+    temp = "";
+    for (var j = result[i].length - 1; j >= 0; j--) {
+      temp += result[i][j];
+    }
+    result[i] = temp;
+  }
+  return result.join(" ");
+};
+
+let revWords2 = sentence => {
+  let array = sentence.split("");
+  let result = "";
+  array.forEach(char => {
+    result = char + result;
+  });
+  return result;
+};
+
+let revWords3 = sentence => {
+  let array = sentence.split("");
+  let result = "";
+  for (char of array) {
+    result = char + result;
+  }
+  return result;
+};

@@ -42,4 +42,9 @@ window.addEventListener("load", function() {
   document.querySelector("button").addEventListener("click", controller);
 });
 
-$(document).ready(controller);
+//$(document).ready(controller);
+
+window.addEventListener("load", () => {
+  let button = document.querySelector("button");
+  button.addEventListener("click", controller);
+});
